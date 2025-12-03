@@ -14,7 +14,7 @@
     <header class="header">
         <nav class="nav container">
             <div class="logo">
-                <span class="logo-icon">📦</span>
+                <span class="logo-icon" aria-hidden="true">📦</span>
                 <span class="logo-text">WareHouse<span class="logo-highlight">Pro</span></span>
             </div>
             <ul class="nav-links">
@@ -48,37 +48,37 @@
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
+                    <div class="service-icon" aria-hidden="true">📊</div>
                     <h3>Inventory Management</h3>
                     <p>Real-time inventory tracking and management system to keep your stock levels optimized and reduce carrying costs.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">📦</div>
+                    <div class="service-icon" aria-hidden="true">📦</div>
                     <h3>Order Fulfillment</h3>
                     <p>Efficient pick, pack, and ship services ensuring your orders reach customers quickly and accurately.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🏭</div>
+                    <div class="service-icon" aria-hidden="true">🏭</div>
                     <h3>Storage Solutions</h3>
                     <p>Flexible storage options including climate-controlled facilities, bulk storage, and specialized handling.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">📍</div>
+                    <div class="service-icon" aria-hidden="true">📍</div>
                     <h3>Real-Time Tracking</h3>
                     <p>Monitor your inventory and shipments in real-time with our advanced tracking and reporting dashboard.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🔗</div>
+                    <div class="service-icon" aria-hidden="true">🔗</div>
                     <h3>Supply Chain Optimization</h3>
                     <p>End-to-end supply chain solutions to streamline operations, reduce costs, and improve efficiency.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🚚</div>
+                    <div class="service-icon" aria-hidden="true">🚚</div>
                     <h3>Distribution Services</h3>
                     <p>Strategic distribution network to ensure timely delivery to your customers across all regions.</p>
                 </div>
@@ -99,15 +99,15 @@
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <span class="contact-icon">📧</span>
+                            <span class="contact-icon" aria-hidden="true">📧</span>
                             <span>contact@warehousepro.com</span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">📱</span>
+                            <span class="contact-icon" aria-hidden="true">📱</span>
                             <span>WhatsApp Available</span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">🕐</span>
+                            <span class="contact-icon" aria-hidden="true">🕐</span>
                             <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
                         </div>
                     </div>
@@ -124,9 +124,10 @@
                                 placeholder="Enter your email address"
                                 required
                             >
+                            <span id="emailError" class="error-message" role="alert"></span>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">
-                            <span class="whatsapp-icon">💬</span>
+                            <span class="whatsapp-icon" aria-hidden="true">💬</span>
                             Send Inquiry via WhatsApp
                         </button>
                         <p class="form-note">Click to open WhatsApp with your inquiry</p>
@@ -141,7 +142,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-icon">📦</span>
+                    <span class="logo-icon" aria-hidden="true">📦</span>
                     <span class="logo-text">WareHouse<span class="logo-highlight">Pro</span></span>
                 </div>
                 <p class="footer-text">Professional warehouse management services for businesses of all sizes.</p>
@@ -175,16 +176,26 @@
             e.preventDefault();
             
             const email = document.getElementById('email').value.trim();
+            const emailInput = document.getElementById('email');
+            const errorElement = document.getElementById('emailError');
+            
+            // Clear previous error
+            errorElement.textContent = '';
+            emailInput.classList.remove('input-error');
             
             if (!email) {
-                alert('Please enter your email address.');
+                errorElement.textContent = 'Please enter your email address.';
+                emailInput.classList.add('input-error');
+                emailInput.focus();
                 return;
             }
             
             // Validate email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
+                errorElement.textContent = 'Please enter a valid email address.';
+                emailInput.classList.add('input-error');
+                emailInput.focus();
                 return;
             }
             

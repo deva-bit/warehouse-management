@@ -360,11 +360,26 @@ body {
 
 .form-group input:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
 }
 
 .form-group input::placeholder {
     color: #9ca3af;
+}
+
+.form-group input.input-error {
+    border-color: #ef4444;
+}
+
+.form-group input.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    min-height: 1.25rem;
 }
 
 .whatsapp-icon {
