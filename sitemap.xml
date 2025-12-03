@@ -5,9 +5,10 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
     <!-- Homepage -->
+    <!-- TODO: Update lastmod dates when content changes -->
     <url>
         <loc>https://deva-bit.github.io/warehouse-management/</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,7 +16,7 @@
     <!-- Home Section (anchor) -->
     <url>
         <loc>https://deva-bit.github.io/warehouse-management/#home</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -23,7 +24,7 @@
     <!-- Services Section (anchor) -->
     <url>
         <loc>https://deva-bit.github.io/warehouse-management/#services</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -31,7 +32,7 @@
     <!-- FAQ Section (anchor) -->
     <url>
         <loc>https://deva-bit.github.io/warehouse-management/#faq</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -39,7 +40,7 @@
     <!-- Contact Section (anchor) -->
     <url>
         <loc>https://deva-bit.github.io/warehouse-management/#contact</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2025-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
