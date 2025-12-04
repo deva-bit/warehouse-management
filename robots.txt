@@ -1,0 +1,17 @@
+# Robots.txt for WareHousePro - Warehouse Management Services
+# https://deva-bit.github.io/warehouse-management/
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://deva-bit.github.io/warehouse-management/sitemap.xml
+
+# Crawl-delay (optional, in seconds)
+# Crawl-delay: 10
+
+# Disallow rules (none currently - all pages are allowed)
+# Add paths here if you need to block specific content
+# Disallow: /private/
+# Disallow: /admin/
