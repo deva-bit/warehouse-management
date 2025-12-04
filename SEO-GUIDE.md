@@ -30,7 +30,7 @@ const WHATSAPP_PHONE_NUMBER = '919876543210'; // <-- CHANGE THIS
 ### 2. Email Address
 Update the contact email in the contact section:
 ```html
-<a href="mailto:contact@warehousepro.com">contact@warehousepro.com</a>
+<a href="mailto:spacesafestorage@spacesafestoragemalaysia">spacesafestorage@spacesafestoragemalaysia</a>
 ```
 
 ### 3. Business Information in Structured Data

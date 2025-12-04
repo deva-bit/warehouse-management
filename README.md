@@ -50,7 +50,7 @@ To receive inquiries via WhatsApp, you need to update the phone number in `index
 
 To update the displayed email address:
 1. Open `index.html`
-2. Find the contact section and update `contact@warehousepro.com` with your email
+2. Find the contact section and update `spacesafestorage@spacesafestoragemalaysia` with your email
 
 ## Deployment
 
