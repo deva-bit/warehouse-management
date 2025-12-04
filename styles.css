@@ -152,7 +152,7 @@ body {
     align-items: center;
     position: relative;
     background: var(--gradient-primary);
-    background-image: 
+    background-image:
         linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(30, 58, 95, 0.95) 100%),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23ffffff10" x="0" y="0" width="50" height="50"/><rect fill="%23ffffff05" x="50" y="50" width="50" height="50"/></svg>');
     background-size: cover, 100px 100px;
@@ -161,7 +161,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.3) 0%, transparent 50%);
 }
@@ -169,8 +169,28 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
     padding: 100px 20px;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lottie-animation {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
 }
 
 .hero-title {
@@ -185,7 +205,7 @@ body {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 0 0 40px 0;
     animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
@@ -219,6 +239,29 @@ body {
 
 .btn-full {
     width: 100%;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
 }
 
 /* Services Section */
@@ -362,7 +405,7 @@ body {
     margin-bottom: 20px;
 }
 
-.contact-info > p {
+.contact-info>p {
     color: var(--text-light);
     margin-bottom: 30px;
     line-height: 1.8;
@@ -500,6 +543,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -508,11 +552,25 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        margin: 0 auto 40px;
+    }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .hero-title {
         font-size: 2.75rem;
     }
@@ -532,49 +590,49 @@ body {
         gap: 40px;
         transition: var(--transition);
     }
-    
+
     .nav-links.active {
         right: 0;
     }
-    
+
     .nav-links a {
         color: var(--white) !important;
         font-size: 1.25rem;
     }
-    
+
     .mobile-menu-btn {
         display: flex;
         z-index: 1001;
     }
-    
+
     .mobile-menu-btn.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .mobile-menu-btn.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .mobile-menu-btn.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
-    
+
     .hero-title {
         font-size: 2.25rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form-wrapper {
         padding: 30px 20px;
     }
@@ -584,12 +642,12 @@ body {
     .hero-title {
         font-size: 1.875rem;
     }
-    
+
     .btn {
         padding: 12px 25px;
         font-size: 0.9rem;
     }
-    
+
     .service-card {
         padding: 30px 20px;
     }
