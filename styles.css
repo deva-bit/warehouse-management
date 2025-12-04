@@ -83,6 +83,11 @@ body {
 }
 
 .logo-highlight {
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.header.scrolled .logo-highlight {
     color: var(--primary-color);
 }
 
